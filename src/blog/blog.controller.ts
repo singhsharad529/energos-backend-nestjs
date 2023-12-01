@@ -4,6 +4,8 @@ import { Blog } from './schemas/blog.schema';
 import { CreateBlogDto } from './dto/create-book.dto';
 import { UpdateBlogDto } from './dto/update-blog.dto';
 import {Query as ExpressQuery} from 'express-serve-static-core';
+import { AuthGuard } from '@nestjs/passport';
+import {UseGuards} from '@nestjs/common/decorators'
 
 
 @Controller('blogs')
@@ -18,6 +20,7 @@ export class BlogController {
     }
 
     @Post('new')
+    @UseGuards(AuthGuard())
     async createBlog(@Body() blog:CreateBlogDto):Promise<Blog>{
         return this.blogService.createBlog(blog);
     }
