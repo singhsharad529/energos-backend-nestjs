@@ -38,12 +38,17 @@ export class BlogService {
     }
 
     async findById(id:string):Promise<Blog>{
-        try{
+        try {
+            
+            const isValidId = mongoose.isValidObjectId(id);
+            if (!isValidId) {
+                throw new BadRequestException("Please Enter Valid id")
+            }
             const blog= await this.blogModel.findById(id);
             return blog;
         }
         catch(error){
-            throw new NotFoundException('Blog not found',error);
+            return error;
         }
         
     }
