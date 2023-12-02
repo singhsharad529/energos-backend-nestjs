@@ -13,7 +13,7 @@ This repository contains a Nestjs application that implements Rest APis for Blog
 Step 1: Clone the repo
 
 ```bash
-git clone https://github.com/singhsharad529/brewapps-assignment.git
+git clone https://github.com/singhsharad529/energos-backend-nestjs
 ```
 
 Step 2: cd into the cloned repo and run:
@@ -99,9 +99,9 @@ $ http://localhost:3000/blogs/65682c7752791f4d19417986
 $ http://localhost:3000/auth/signup
 
 {
-	  "name": "sharad",
-    "email": "sharad908@gmail.com",
-    "password": "sharad890"
+	  "name": "Shawn",
+    "email": "shawn@gmail.com",
+    "password": "shawn123"
 }
 
 # Login with Username,Password( POST request )
@@ -109,13 +109,13 @@ $ http://localhost:3000/auth/signup
 $ http://localhost:3000/auth/signup
 
 {
-    "email": "singhsingh@gmail.com",
-    "password": "sharad123"
+    "email": "shawn@gmail.com",
+    "password": "shawn123"
 }
 
 ```
 
-**For each endpoints of blogs you should add Beare Token inside Authorization header**
+**For each endpoints of blogs you should add Bearer Token inside Authorization header**
 
 ## Deployment:
 
