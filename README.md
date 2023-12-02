@@ -1,30 +1,12 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# RESTful API
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+This is a RESTful API example based on Nestjs and MongoDB, following the **MVC pattern** i.e. Model ~~View~~ Controller.
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+**Mongoose** is used for Database transactions which is an elegant solution to mongodb object modeling for Nestjs.
+
+This repository contains a Nestjs application that implements Rest APis for Blogs using MongoDB Atlas.
 
 ## Description
-
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
 
@@ -36,38 +18,99 @@ $ npm install
 
 ```bash
 # development
-$ npm run start
+$ nest start
 
 # watch mode
-$ npm run start:dev
+$ nest start --watch
 
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+## Available API Endpoints For Blogs:
+
+### Get all Blogs ( GET request ) with pagination
 
 ```bash
-# unit tests
-$ npm run test
 
-# e2e tests
-$ npm run test:e2e
+$ http://localhost:3000/blogs
 
-# test coverage
-$ npm run test:cov
+### Create a new Blog( POST request )
+
+- `http://localhost:3000/books`
+
+{
+"title": "Wings of Fire",
+"author": "Dr.A.P.J Abdul Kalam",
+"summary": "Biography of Dr.A.P.J Abdul Kalam"
+}
+
+### Get a single book by id( GET request )
+
+- `http://localhost:3000/books/654b8e1f24ffce486c58b79d`
+
+### Update a book by id( PATCH request )
+
+- `http://localhost:3000/books/654b8e1f24ffce486c58b79ds`
+
+{
+"title":"Rich Dad, Poor Dad",
+"author":"Robert T Kiosaki",
+"summary":"Money Management"
+}
+
+### Delete a book by id( DELETE request )
+
+- `http://localhost:3000/books/654b8e1f24ffce486c58b79ds`
+
 ```
 
-## Support
+## Available API Endpoints For Users:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+### Get all Blogs ( GET request ) with pagination
 
-## Stay in touch
+```bash
+$ npm install
+```
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+## To start setting up the project
+
+Step 1: Clone the repo
+
+```bash
+git clone https://github.com/singhsharad529/brewapps-assignment.git
+```
+
+Step 2: cd into the cloned repo and run:
+
+```bash
+npm install
+```
+
+Step 3: Put your credentials in the .env file.
+
+```bash
+PORT=3000
+MONGODB_URI=YOUR MONGODB URI
+DB_NAME=DATABASE NAME OF YOUR CHOICE
+DB_USER=DATABASE USER
+DB_PASS=DATABASE USER PASSWORD
+```
+
+Step 4: Start the API by
+
+```bash
+npm start
+```
+
+## Deployment:
+
+## Author
+
+- [**Sharad Kumar Singh**](https://singhsharad529.github.io/sharad-portfolio/)
 
 ## License
 
-Nest is [MIT licensed](LICENSE).
+This project is licensed under the MIT License.
+
+```
+
+```

@@ -1,7 +1,7 @@
 import { IsEmpty, IsNotEmpty, IsString } from "class-validator";
 import { User } from "src/auth/schemas/user.schema";
 
-export class UpdateBlogDto{
+export class CreateBlogDto{
 
     @IsNotEmpty()
     @IsString()
@@ -15,6 +15,6 @@ export class UpdateBlogDto{
     @IsString()
     readonly category: string;
     
-     @IsEmpty({message:"You can't pass user id"})
+    @IsEmpty({message:"You can't pass user id"})
     readonly user:User
 }
