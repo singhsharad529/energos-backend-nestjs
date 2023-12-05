@@ -106,7 +106,7 @@ $ http://localhost:3000/auth/signup
 
 # Login with Username,Password( POST request )
 
-$ http://localhost:3000/auth/signup
+$ http://localhost:3000/auth/login
 
 {
     "email": "shawn@gmail.com",
